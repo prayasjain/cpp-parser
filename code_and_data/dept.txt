@@ -1,0 +1,14 @@
+3
+name
+hod
+phno
+string
+string
+string
+6
+cse
+kks
+23452345
+ece
+pks
+12332333

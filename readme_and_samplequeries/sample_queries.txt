@@ -1,0 +1,45 @@
+define student name string , roll string , dept string 
+
+define dept name string , hod string , phno string
+
+define course prof string , dept string
+
+def prof name string , dept string , age int
+
+student <- { ( "prayas" , "1" , "cse" ) , ("bharat" , "2" ,"cse") , ("pranav" , "3" , "ece" ) , ( "shubham" , "4" , "ece" ) }
+
+dept <- { ("cse" , "kks" , "23452345" ) }
+
+dept <<- { ("ece" ,"pks" , "12332333" ) }
+
+course <- { ("rnc" , "cse" ) }
+
+course <<- { ("pks" , "ece" ) }
+
+prof <<- { ("rnc" , "cse" ,30) , ("kks" , "cse" , 50 ) , ("pks" , "ece" , 56 ) }
+
+rename prof teacher
+
+select student.name , student.dept , course.prof from student, course where student.dept = "cse" or course.dept = "cse"
+
+project student.dept from student
+
+
+select student.dept = "cse" or course.prof = "pks" project student.name , student.dept , course.prof select student.name , student.dept , course.prof , course.dept from student, course
+
+select student.dept = "ece" project student.dept , student.name from student
+
+project student.name , s.dept select student.name , student.dept , s.name , s.dept from student , rename student s 
+
+select student.name , student.dept , s.name , s.dept from student , rename prof s where student.name = "prayas"
+
+student cartesian_product prof cartesian_product course
+
+join student { dept } 
+
+join student { dept , roll }
+
+student union dept intersect student
+
+
+

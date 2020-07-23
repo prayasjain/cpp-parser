@@ -1,0 +1,7 @@
+6
+student
+dept
+course
+prof
+t1
+t2

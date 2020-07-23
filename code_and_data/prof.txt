@@ -1,0 +1,17 @@
+3
+name
+dept
+age
+string
+string
+int
+9
+rnc
+cse
+30
+kks
+cse
+50
+pks
+ece
+56
